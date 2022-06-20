@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css"/>
   <link rel="stylesheet" href="/styles/nav.css" type="text/css"/>
   <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
+  <!--  favicon -->
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -58,9 +61,18 @@
       </div>
     </header>
     <!-- Page-specific (main) content here -->
-    <main class="container-xxl">
-
-
+    <main class="container-xxl py-5">
+    <!--  tweet     -->
+      <section class="new-tweet">
+        <h2 class="display-6 new-tweet-header">Compose Tweet</h2>
+        <form method="post" action="/tweets">
+          <textarea name="text" required rows="1" placeholder="What are you humming about?" autofocus id="tweet-text"></textarea>
+          <div class="new-tweet-bottom mt-3">
+            <button class="btn btn-primary btn-lg" style="border-radius: 40px;padding: 3px 30px" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
     </main>
 </body>
 </html>

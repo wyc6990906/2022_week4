@@ -23,7 +23,7 @@ nav a:hover {
 }
 
 .nav-left a:hover {
-  color: crimson;
+
 }
 
 .nav-right {
@@ -39,6 +39,7 @@ nav a:hover {
 
 .nav-right i {
   color: crimson;
+  font-size: 25px;
 }
 
 .nav-right i:hover {
