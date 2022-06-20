@@ -22,16 +22,23 @@
 .new-tweet form textarea:focus {
   outline: none;
 }
+
 .new-tweet-bottom button {
   font-family: 'Bungee', cursive;
 }
+
 .new-tweet-bottom {
   display: flex;
   justify-content: space-between;
 }
+
 .new-tweet-bottom .counter {
   padding-right: 1em;
   font-weight: bolder;
   font-size: x-large;
 }
 
+#tweetBtn:hover {
+  background-color: #f038ff;
+  box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);
+}
