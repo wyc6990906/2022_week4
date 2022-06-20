@@ -1,6 +1,6 @@
 nav {
   height: 120px;
-  background-color: #4056A1;
+  background-color: #423A6D;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,7 +38,6 @@ nav a:hover {
 }
 
 .nav-right i {
-  color: crimson;
   font-size: 25px;
 }
 
