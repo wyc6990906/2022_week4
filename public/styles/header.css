@@ -1,0 +1,13 @@
+/*  header.css  */
+
+.header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d89834;
+  background-image: url("../images/black-felt.png");
+  color: white;
+}
+

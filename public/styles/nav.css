@@ -22,8 +22,8 @@ nav a:hover {
   font-family: 'Bungee', cursive;
 }
 
-.nav-left a {
-
+.nav-left a:hover {
+  color: crimson;
 }
 
 .nav-right {
