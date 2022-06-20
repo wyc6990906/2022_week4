@@ -1,0 +1,48 @@
+nav {
+  height: 120px;
+  background-color: #4056A1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*change a tag style*/
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.nav-left {
+  padding: 0 1.5em;
+  font-family: 'Bungee', cursive;
+}
+
+.nav-left a {
+
+}
+
+.nav-right {
+  padding: 0 1.5em;
+}
+
+.nav-right a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nav-right i {
+  color: crimson;
+}
+
+.nav-right i:hover {
+
+}
+
+
