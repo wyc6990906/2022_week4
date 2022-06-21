@@ -47,3 +47,7 @@
 .red-num {
   color: red;
 }
+
+.error-msg {
+  display: none;
+}

@@ -3,7 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-import timestampToTime from './timestampToTime.js'
+import escape from './escape.js'
 
 
 //get data from server
@@ -22,22 +22,33 @@ const postTweet = () => {
   const counter = $('.counter')
   newTweetForm.submit(function (e) {
     e.preventDefault()
-    // function turns a set of form data into a query string
-    const tweetFormQuery = $(this).serialize()
-    // console.log(tweetFormQuery)
-    // ajax
-    $.ajax({method: 'POST', url: "/tweets/", data: tweetFormQuery})
-      .done(function () {
-        //reset textarea
-        textArea.val('')
-        //reset the char conter
-        counter.val(140)
-        //resend the get tweets request
-        loadTweets()
-      })
-      .fail(error => {
-        console.log(error.message)
-      })
+    //validate form
+    // console.log(textArea.val())
+    if (!textArea.val()) {
+      errorMsgContainer.css('display', 'block')
+      errorMsgContainer.text('Tweet content cannot be empty.')
+    } else if (textArea.val().length > 140) {
+      errorMsgContainer.css('display', 'block')
+      errorMsgContainer.text("Tweet content must less than 140 characters.")
+    } else {
+      errorMsgContainer.css('display', 'none')
+      // function turns a set of form data into a query string
+      const tweetFormQuery = $(this).serialize()
+      // console.log(tweetFormQuery)
+      // ajax
+      $.ajax({method: 'POST', url: "/tweets/", data: tweetFormQuery})
+        .done(function () {
+          //reset textarea
+          textArea.val('')
+          //reset the char conter
+          counter.val(140)
+          //resend the get tweets request
+          loadTweets()
+        })
+        .fail(error => {
+          console.log(error.message)
+        })
+    }
   })
 }
 // create TweetList html element
@@ -55,7 +66,7 @@ const createTweetElement = function (tweetData) {
         </div>
       </header>
       <div class="tweet-content-wrapper my-2 px-1">
-        <p class="tweet-content px-5">${tweetData.content.text}</p>
+        <p class="tweet-content px-5">${escape(tweetData.content.text)}</p>
       </div>
       <div class="divider"></div>
       <footer class="tweets-list-footer px-5">
