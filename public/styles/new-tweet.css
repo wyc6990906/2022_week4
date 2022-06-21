@@ -43,3 +43,7 @@
 #tweetBtn:hover {
   box-shadow: 1px 1px 19px 6px rgb(127, 115, 203);
 }
+
+.red-num {
+  color: red;
+}
