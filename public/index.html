@@ -30,9 +30,13 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+  <!-- timeago -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+          integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="module" src="/scripts/client.js"></script>
+  <!--  <script type="module" src="/scripts/timestampToTime.js"></script>-->
 </head>
 
 <body>
@@ -66,8 +70,8 @@
   <!--  new-tweet     -->
   <section class="new-tweet p-5">
     <h2 class="display-6 new-tweet-header">Compose Tweet</h2>
-    <form method="post" id="new-tweet-form" action="/tweets">
-      <textarea name="text" required rows="1" placeholder="What are you humming about?" autofocus
+    <form method="post" id="new-tweet-form" action="/tweets/">
+      <textarea name="text" rows="1" placeholder="What are you humming about?" autofocus
                 id="tweet-text"></textarea>
       <div class="new-tweet-bottom mt-3">
         <button class="btn btn-primary btn-lg" id="tweetBtn"
@@ -79,32 +83,31 @@
   </section>
   <!--  tweets list     -->
   <section id="tweetsList" class="tweets-list my-5">
-<!--    <article class="tweet-wrapper">-->
-<!--      <header class="tweets-list-header p-5">-->
-<!--        <div class="tweets-list-avatar">-->
-<!--          <img src="./images/react.png" width="150px" height="100px" alt="avatar">-->
-<!--          <span class="ms-3">Dylan Wang</span>-->
-<!--        </div>-->
-<!--        <div class="tweets-list-user">-->
-<!--          <h6 class="right-username">@Wang</h6>-->
-<!--        </div>-->
-<!--      </header>-->
-<!--      <div class="tweet-content-wrapper my-2 px-1">-->
-<!--        <p class="tweet-content px-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequatur eveniet modi?</p>-->
-<!--      </div>-->
-<!--      <div class="divider"></div>-->
-<!--      <footer class="tweets-list-footer px-5">-->
-<!--        <h6>Just Now</h6>-->
-<!--        <div class="icons">-->
-<!--            <span class="icons"><span class="fas fa-flag"></span>-->
-<!--            <span class="fas fa-retweet mx-2"></span>-->
-<!--            <span class="fas fa-heart"></span></span>-->
-<!--        </div>-->
-<!--      </footer>-->
-<!--    </article>-->
+    <!--    <article class="tweet-wrapper">-->
+    <!--      <header class="tweets-list-header p-5">-->
+    <!--        <div class="tweets-list-avatar">-->
+    <!--          <img src="./images/react.png" width="150px" height="100px" alt="avatar">-->
+    <!--          <span class="ms-3">Dylan Wang</span>-->
+    <!--        </div>-->
+    <!--        <div class="tweets-list-user">-->
+    <!--          <h6 class="right-username">@Wang</h6>-->
+    <!--        </div>-->
+    <!--      </header>-->
+    <!--      <div class="tweet-content-wrapper my-2 px-1">-->
+    <!--        <p class="tweet-content px-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequatur eveniet modi?</p>-->
+    <!--      </div>-->
+    <!--      <div class="divider"></div>-->
+    <!--      <footer class="tweets-list-footer px-5">-->
+    <!--        <h6>Just Now</h6>-->
+    <!--        <div class="icons">-->
+    <!--            <span class="icons"><span class="fas fa-flag"></span>-->
+    <!--            <span class="fas fa-retweet mx-2"></span>-->
+    <!--            <span class="fas fa-heart"></span></span>-->
+    <!--        </div>-->
+    <!--      </footer>-->
+    <!--    </article>-->
   </section>
 </main>
-
 
 
 <!-- input counter    -->

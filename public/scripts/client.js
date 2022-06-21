@@ -3,62 +3,36 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
-const tweetData = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1655573607040
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1655660007040
-  }
-]
+import timestampToTime from './timestampToTime.js'
 
 
-const timestampToTime = function (timestamp) {
-  const date = new Date(timestamp);
-  const Y = date.getFullYear() + "-";
-  const M =
-    (date.getMonth() + 1 < 10
-      ? "0" + (date.getMonth() + 1)
-      : date.getMonth() + 1) + "-";
-  const D = date.getDate() + " ";
-  const hh = date.getHours() + ":";
-  const mm = date.getMinutes() + ":";
-  const ss = date.getSeconds();
-  return Y + M + D + hh + mm + ss;
+//get data from server
+const loadTweets = function () {
+  $.get('/tweets', function (data) {
+    renderTweets(data)
+  })
 }
 
 
-const renderTweets = function (tweetData) {
-  // //remove html if existing
-  const tweetsList = $('.tweets-list')
-  // loops through tweets array
-  // console.log(tweetData)
-  for (const item of tweetData) {
-    // calls createTweetElement for each tweet
-    const $tweet = createTweetElement(item)
-    // takes return value and appends it to the tweets container
-    tweetsList.prepend($tweet)
-  }
+//submit form[id= new-tweet-form] and add to server
+const postTweet = () => {
+  const newTweetForm = $('#new-tweet-form')
+  newTweetForm.submit(function (e) {
+    e.preventDefault()
+    // function turns a set of form data into a query string
+    const tweetFormQuery = $(this).serialize()
+    // console.log(tweetFormQuery)
+    // ajax
+    $.ajax({
+      method: 'POST',
+      url: "/tweets/",
+      data: tweetFormQuery
+    })
+      .done(function (msg) {
+        console.log(msg)
+      })
+  })
 }
-
-
 // create TweetList html element
 const createTweetElement = function (tweetData) {
   let $tweet = ''
@@ -78,7 +52,7 @@ const createTweetElement = function (tweetData) {
       </div>
       <div class="divider"></div>
       <footer class="tweets-list-footer px-5">
-        <h6>${timestampToTime(tweetData.created_at)}</h6>
+        <h6>${timeago.format(tweetData.created_at)}</h6>
         <div class="icons">
             <span class="icons"><span class="fas fa-flag"></span>
             <span class="fas fa-retweet mx-2"></span>
@@ -89,8 +63,22 @@ const createTweetElement = function (tweetData) {
     `)
   return $tweet
 }
+// append to dom
+const renderTweets = function (tweetData) {
+  // //remove html if existing
+  const tweetsList = $('.tweets-list')
+  // loops through tweets array
+  // console.log(tweetData)
+  for (const item of tweetData) {
+    // calls createTweetElement for each tweet
+    const $tweet = createTweetElement(item)
+    // takes return value and appends it to the tweets container
+    tweetsList.prepend($tweet)
+  }
+}
 
 
 $(document).ready(function () {
-  renderTweets(tweetData);
+  loadTweets()
+  postTweet()
 })

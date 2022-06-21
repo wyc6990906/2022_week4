@@ -15,5 +15,4 @@ $(document).ready(function () {
       output.removeClass('red-num')
     }
   });
-
 });
