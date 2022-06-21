@@ -1,0 +1,62 @@
+/*tweet-list*/
+
+.tweets-list {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  box-shadow: 0 1.5vw 3vw rgba(0, 0, 0, 0.3);
+  border: 0.25em solid dimgray;
+  border-radius: 10px;
+  font-size: 1.25rem;
+}
+
+.tweet-wrapper {
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tweets-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweets-list-avatar {
+  font-weight: bold;
+}
+
+.tweets-list-footer {
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-username {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size: larger;
+  color: #9898a0;
+}
+.divider {
+  width: 95%;
+  margin-left: 2%;
+  border-top: 0.25em solid dimgray;
+}
+
+.icons {
+  color: #4e3ca5;
+  cursor: pointer;
+}
+.fa-flag:hover{
+  color: #d29d21;
+}
+.fa-retweet:hover{
+  color: #d29d21;
+}
+
+.fa-heart:hover{
+  color: #d29d21;
+}
