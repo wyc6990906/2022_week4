@@ -17,6 +17,7 @@ html {
 
 body {
   color: #545149;
+  padding-top: 120px;
   background-color: #f3f3f3;
   /*fonts*/
   font-family: 'Source Sans Pro', sans-serif;
