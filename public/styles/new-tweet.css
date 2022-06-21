@@ -4,6 +4,8 @@
   /*display: flex;*/
   /*flex-direction: column;*/
   width: 90%;
+  box-shadow: 0 1.5vw 3vw rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 
 .new-tweet form {
@@ -39,6 +41,5 @@
 }
 
 #tweetBtn:hover {
-  background-color: #f038ff;
-  box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);
+  box-shadow: 1px 1px 19px 6px rgb(127, 115, 203);
 }

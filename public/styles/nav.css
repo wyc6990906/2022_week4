@@ -22,8 +22,9 @@ nav a:hover {
   font-family: 'Bungee', cursive;
 }
 
-.nav-left a:hover {
-
+.nav-left a:hover h1 {
+  transform: scale(1.08);
+  /*box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);*/
 }
 
 .nav-right {
@@ -42,7 +43,8 @@ nav a:hover {
 }
 
 .nav-right i:hover {
-
+  color: #FFFFFF;
+  transform: scale(1.5);
 }
 
 
