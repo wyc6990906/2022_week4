@@ -17,19 +17,26 @@ const loadTweets = function () {
 //submit form[id= new-tweet-form] and add to server
 const postTweet = () => {
   const newTweetForm = $('#new-tweet-form')
+  const textArea = $('#tweet-text')
+  const errorMsgContainer = $('.error-msg')
+  const counter = $('.counter')
   newTweetForm.submit(function (e) {
     e.preventDefault()
     // function turns a set of form data into a query string
     const tweetFormQuery = $(this).serialize()
     // console.log(tweetFormQuery)
     // ajax
-    $.ajax({
-      method: 'POST',
-      url: "/tweets/",
-      data: tweetFormQuery
-    })
-      .done(function (msg) {
-        console.log(msg)
+    $.ajax({method: 'POST', url: "/tweets/", data: tweetFormQuery})
+      .done(function () {
+        //reset textarea
+        textArea.val('')
+        //reset the char conter
+        counter.val(140)
+        //resend the get tweets request
+        loadTweets()
+      })
+      .fail(error => {
+        console.log(error.message)
       })
   })
 }
