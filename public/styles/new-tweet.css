@@ -7,6 +7,11 @@
   box-shadow: 0 1.5vw 3vw rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
+.new-tweet:hover{
+  box-shadow: 0.25em 0.25em 0.66em  dimgray;
+  border-color: black;
+  color: black;
+}
 
 .new-tweet form {
   display: flex;

@@ -79,11 +79,11 @@ const postTweet = () => {
 const createTweetElement = function (tweetData) {
   let $tweet = ''
   $tweet = $(`
-       <article class="tweet-wrapper">
-      <header class="tweets-list-header p-5">
-        <div class="tweets-list-avatar">
-          <img src="${tweetData.user.avatars}"  alt="avatar">
-          <span class="ms-3">${tweetData.user.name}</span>
+       <article class="tweet-wrapper my-1">
+          <header class="tweets-list-header p-5">
+           <div class="tweets-list-avatar">
+           <img src="${tweetData.user.avatars}"  alt="avatar">
+           <span class="ms-3">${tweetData.user.name}</span>
         </div>
         <div class="tweets-list-user">
           <h6 class="right-username">${tweetData.user.handle}</h6>

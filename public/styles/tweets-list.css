@@ -10,11 +10,23 @@
   font-size: 1.25rem;
 }
 
+/*.tweets-list:hover{*/
+/*  box-shadow: 0.25em 0.25em 0.66em  dimgray;*/
+/*  border-color: black;*/
+/*  color: black;*/
+/*}*/
+
 .tweet-wrapper {
   display: flex;
   border-radius: 10px;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.tweet-wrapper:hover {
+  box-shadow: 0.25em 0.25em 0.66em dimgray;
+  border-color: black;
+  color: black;
 }
 
 .tweets-list-header {
@@ -40,6 +52,7 @@
   font-size: larger;
   color: #9898a0;
 }
+
 .divider {
   width: 91% !important;
   margin-left: 48px;
@@ -50,13 +63,15 @@
   color: #4e3ca5;
   cursor: pointer;
 }
-.fa-flag:hover{
-  color: #d29d21;
-}
-.fa-retweet:hover{
+
+.fa-flag:hover {
   color: #d29d21;
 }
 
-.fa-heart:hover{
+.fa-retweet:hover {
+  color: #d29d21;
+}
+
+.fa-heart:hover {
   color: #d29d21;
 }
