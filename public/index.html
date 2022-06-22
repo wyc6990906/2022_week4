@@ -7,7 +7,6 @@
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         type="text/css"/>
-
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css"/>
   <link rel="stylesheet" href="/styles/nav.css" type="text/css"/>
@@ -41,9 +40,10 @@
   <!--  <script type="module" src="/scripts/timestampToTime.js"></script>-->
 </head>
 
+
 <body>
 <!-- Top nav bar (fixed) -->
-<nav class="container-fluid position-fixed top-0 start-0">
+<nav class="navContainer container-fluid position-fixed top-0 start-0">
   <div class="nav-left">
     <a href="/" class="link-logo">
       <h1><span>Tweeter</span></h1>
@@ -57,41 +57,44 @@
   </div>
   <!--  <i class="fa-solid fa-angles-down"></i>-->
 </nav>
-<!--Header-->
-<header class="container-xxl header">
-  <div class="my-1">
-    <img src="/images/profile-hex.png">
-  </div>
-  <br>
-  <div>
-    <h2>Mamie Yang</h2>
-  </div>
-</header>
-<!-- Page-specific (main) content here -->
-<main class="container-xxl py-5">
-  <!--  new-tweet     -->
-  <section class="new-tweet p-5">
-    <h2 class="display-6 new-tweet-header fw-bold">Compose Tweet</h2>
-    <form method="post" id="new-tweet-form" action="/tweets/">
+<div class="responsiveContainer">
+  <header id="header" class="container-xxl header">
+    <div class="my-1">
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div>
+      <h2>Mamie Yang</h2>
+    </div>
+  </header>
+  <!-- Page-specific (main) content here -->
+  <main class="mainContainer container-xxl py-5">
+    <!--  new-tweet     -->
+    <section class="new-tweet p-5">
+      <h2 class="display-6 new-tweet-header fw-bold">Compose Tweet</h2>
+      <form method="post" id="new-tweet-form" action="/tweets/">
       <textarea name="text" rows="1" placeholder="What are you humming about?" autofocus
                 id="tweet-text"></textarea>
-      <!-- error meg      -->
-      <p class="error-msg my-2 ps-1 text-danger fs-5 fw-bold">tweet cannot be empty</p>
-      <div class="new-tweet-bottom mt-3">
-        <button class="btn btn-primary btn-lg" id="tweetBtn"
-                style="border-radius: 40px;padding: 3px 30px;background: #423A6B;border:#423A6B" type="submit">Tweet
-        </button>
-        <output name="counter" class="counter" for="tweet-text">140</output>
-      </div>
-    </form>
-  </section>
-  <!--  tweets list     -->
-  <section id="tweetsList" class="tweets-list my-5"></section>
-  <!-- backTop  -->
-  <div class="back-to-Top fs-1 position-fixed bottom-0 end-0 me-1">
-    <i class="fas fa-angle-double-up" style="color: #696969"></i>
-  </div>
-</main>
+        <!-- error meg      -->
+        <p class="error-msg my-2 ps-1 text-danger fs-5 fw-bold">tweet cannot be empty</p>
+        <div class="new-tweet-bottom mt-3">
+          <button class="btn btn-primary btn-lg" id="tweetBtn"
+                  style="border-radius: 40px;padding: 3px 30px;background: #423A6B;border:#423A6B" type="submit">Tweet
+          </button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
+    <!--  tweets list     -->
+    <section id="tweetsList" class="tweets-list my-5"></section>
+    <!-- backTop  -->
+    <div class="back-to-Top fs-1 position-fixed bottom-0 end-0 me-1">
+      <i class="fas fa-angle-double-up" style="color: #696969"></i>
+    </div>
+  </main>
+</div>
+<!--Header-->
+
 
 <!-- input counter    -->
 <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>

@@ -40,3 +40,46 @@ main {
 }
 
 
+/* Desktop Layout */
+
+@media only screen and (min-width: 1024px) {
+  .responsiveContainer {
+    display: flex;
+    flex-direction: row;
+    background-color: #dee1e6;
+    background-image: url("../images/asfalt-dark.png");
+  }
+
+  .navContainer {
+    position: fixed;
+    z-index: 999;
+  }
+
+  #header {
+    width: 33.3%;
+    position: relative;
+    background-color: #dee1e6;
+    background-image: url("../images/asfalt-dark.png");
+  }
+
+  .mainContainer {
+    display: flex;
+    background-color: #dee1e6;
+    background-image: url("../images/asfalt-dark.png");
+  }
+
+  .new-tweet {
+    background-color: #f3f3f3;
+  }
+
+  .tweets-list {
+    position: absolute;
+    top: 500px;
+    left: 60px;
+    background-color: #f3f3f3;
+    width: 90%;
+  }
+
+
+}
+

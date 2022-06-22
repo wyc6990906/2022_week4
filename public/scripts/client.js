@@ -92,7 +92,7 @@ const createTweetElement = function (tweetData) {
       <div class="tweet-content-wrapper my-2 px-1">
         <p class="tweet-content px-5">${escape(tweetData.content.text)}</p>
       </div>
-      <div class="divider"></div>
+      <div class="divider container-fluid"></div>
       <footer class="tweets-list-footer px-5">
         <h6>${timeago.format(tweetData.created_at)}</h6>
         <div class="icons">
