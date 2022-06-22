@@ -5,6 +5,21 @@
  */
 import escape from './escape.js'
 
+//when user scroll show and can scroll back top
+$('.back-to-Top').on('click',function () {
+  $('html,body').animate({scrollTop: 0}, 100);
+})
+$(document).scroll(function () {
+  if ($(this).scrollTop() > 0) {
+    $('.back-to-Top').show()
+  }
+  //don't know why here cannot use else statement
+  if ($(this).scrollTop() <= 0) {
+    $('.back-to-Top').hide()
+  }
+})
+
+
 // click write a new tweet scrollDown
 const navLink = $('#scroll-to-form')
 const newTweet = $('.new-tweet')
@@ -12,7 +27,7 @@ const textArea = $('#tweet-text')
 navLink.on('click', function (e) {
   e.preventDefault()
   const scrollTop = newTweet.offset().top - 120
-  $('html,body').animate({scrollTop: scrollTop}, 500);
+  $('html,body').animate({scrollTop: scrollTop}, 300);
   textArea.focus()
 })
 

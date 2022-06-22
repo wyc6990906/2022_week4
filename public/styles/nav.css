@@ -47,4 +47,13 @@ nav a:hover {
   transform: scale(1.5);
 }
 
+.back-to-Top {
+  cursor: pointer;
+  display: none;
+}
+
+.back-to-Top:hover {
+  transform: scale(1.1);
+}
+
 
