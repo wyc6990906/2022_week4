@@ -7,7 +7,6 @@ Designed & developed by Dylan Wang.
 
 ## Screenshots
 ### Small Screen Version
-Navigation and Header View
 
 ![Header View](/assets/screenshots/smallScreen.gif)
 
