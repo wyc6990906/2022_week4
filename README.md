@@ -6,36 +6,12 @@ Focus of this project is on comfort with front-end responsive design, simple CSS
 Designed & developed by Dylan Wang.
 
 ## Screenshots
-###Small Screen Version
+### Small Screen Version
 Navigation and Header View
 
-![Header View](/assets/screenshots/smallScreen1.png)
+![Header View](/assets/screenshots/smallScreen.gif)
 
-Tweet List View
-
-![Header View](/assets/screenshots/smallScreen2.png)
-
-Post Tweet View
-
-![Header View](/assets/screenshots/smallScreen3.png)
-
-Post Tweet View
-
-![Header View](/assets/screenshots/smallScreen3.png)
-
-Back top Button
-
-![Header View](/assets/screenshots/smallScreenBackTop.png)
-
-Error Message 1
-
-![Header View](/assets/screenshots/errMsg1.png)
-
-Error Message 2
-
-![Header View](/assets/screenshots/errMsg2.png)
-
-###Desktop Screen Layout
+### Desktop Screen Layout
 
 ![Header View](/assets/screenshots/Desktop.png)
 
