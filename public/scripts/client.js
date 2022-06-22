@@ -5,6 +5,17 @@
  */
 import escape from './escape.js'
 
+// click write a new tweet scrollDown
+const navLink = $('#scroll-to-form')
+const newTweet = $('.new-tweet')
+const textArea = $('#tweet-text')
+navLink.on('click', function (e) {
+  e.preventDefault()
+  const scrollTop = newTweet.offset().top - 120
+  $('html,body').animate({scrollTop: scrollTop}, 500);
+  textArea.focus()
+})
+
 
 //get data from server
 const loadTweets = function () {
@@ -12,8 +23,6 @@ const loadTweets = function () {
     renderTweets(data)
   })
 }
-
-
 //submit form[id= new-tweet-form] and add to server
 const postTweet = () => {
   const newTweetForm = $('#new-tweet-form')
