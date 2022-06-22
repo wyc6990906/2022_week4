@@ -11,4 +11,11 @@
   color: white;
 }
 
+.userName {
+  cursor: pointer;
+}
+
+.userName:hover {
+  transform: scale(1.1);
+}
 

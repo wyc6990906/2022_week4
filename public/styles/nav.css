@@ -24,7 +24,6 @@ nav a:hover {
 
 .nav-left a:hover h1 {
   transform: scale(1.08);
-  /*box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);*/
 }
 
 .nav-right {
@@ -39,13 +38,17 @@ nav a:hover {
 }
 
 .nav-right i {
-  font-size: 25px;
+  font-size: 30px;
+  animation: arrowDown 1s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }
 
 .nav-right i:hover {
   color: #FFFFFF;
   transform: scale(1.5);
 }
+
 
 .back-to-Top {
   cursor: pointer;
@@ -56,4 +59,13 @@ nav a:hover {
   transform: scale(1.1);
 }
 
+/*add animation too arrow*/
+@keyframes arrowDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
 
