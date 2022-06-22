@@ -1,8 +1,16 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+A simple SPA AJAX based Twitter clone that uses jQuery, CSS and HTML to post and get tweets from a node server.
+Focus of this project is on comfort with front-end responsive design, simple CSS and HTML, and some jQuery.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+Designed & developed by Dylan Wang.
+
+## Screenshots
+Small Screen Version
+![Header View](/assets/screenshots/smallScreen1.png)
+
+
+
 
 ## Getting Started
 
@@ -11,8 +19,12 @@ This repository is the starter code for the project: Students will fork and clon
 3. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
+5. Change your screen size to see the different layouts, the breakpoint is 1024px.
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- Chance
+- Body-parser
+- Md5
