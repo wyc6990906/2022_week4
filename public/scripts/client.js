@@ -47,7 +47,6 @@ const postTweet = () => {
   newTweetForm.submit(function (e) {
     e.preventDefault()
     //validate form
-    // console.log(textArea.val())
     if (!textArea.val()) {
       errorMsgContainer.css('display', 'block')
       errorMsgContainer.text('Tweet content cannot be empty.')
@@ -58,7 +57,6 @@ const postTweet = () => {
       errorMsgContainer.css('display', 'none')
       // function turns a set of form data into a query string
       const tweetFormQuery = $(this).serialize()
-      // console.log(tweetFormQuery)
       // ajax
       $.ajax({method: 'POST', url: "/tweets/", data: tweetFormQuery})
         .done(function () {
@@ -110,7 +108,6 @@ const renderTweets = function (tweetData) {
   // //remove html if existing
   const tweetsList = $('.tweets-list')
   // loops through tweets array
-  // console.log(tweetData)
   for (const item of tweetData) {
     // calls createTweetElement for each tweet
     const $tweet = createTweetElement(item)
