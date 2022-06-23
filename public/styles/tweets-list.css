@@ -10,12 +10,6 @@
   font-size: 1.25rem;
 }
 
-/*.tweets-list:hover{*/
-/*  box-shadow: 0.25em 0.25em 0.66em  dimgray;*/
-/*  border-color: black;*/
-/*  color: black;*/
-/*}*/
-
 .tweet-wrapper {
   display: flex;
   border-radius: 10px;
