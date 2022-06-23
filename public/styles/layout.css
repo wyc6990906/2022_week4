@@ -73,16 +73,19 @@ main {
   }
 
   .tweets-list {
-    position: absolute;
-    top: 500px;
-    left: 60px;
     background-color: #f3f3f3;
-    width: 90%;
   }
 
-  #footer {
-    display: none;
-  }
+  /*.tweets-list {*/
+  /*  position: absolute;*/
+  /*  top: 500px;*/
+  /*  left: 60px;*/
+  /*  background-color: #f3f3f3;*/
+  /*  width: 90%;*/
+  /*}*/
+  /*#footer {*/
+  /*  display: none;*/
+  /*}*/
 }
 
 
